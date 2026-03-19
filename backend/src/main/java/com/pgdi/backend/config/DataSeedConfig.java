@@ -36,6 +36,7 @@ public class DataSeedConfig implements CommandLineRunner {
             admin.setUsername("admin");
             admin.setEmail("admin@pgdi.com.br");
             admin.setPassword(passwordEncoder.encode("Admin@1234"));
+            admin.setRole(UserRole.ADMIN);
             usuarioRepository.save(admin);
 
             Usuario user = new Usuario();
